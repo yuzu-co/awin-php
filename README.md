@@ -5,6 +5,10 @@
 
 PHP library for the Awin API.
 
+You can get your apiToken here: [https://ui.awin.com/awin-api](https://ui.awin.com/awin-api)
+
+See full doc: [http://wiki.awin.com/index.php/Publisher_API](http://wiki.awin.com/index.php/Publisher_API)
+
 
 ## Install
 

@@ -5,7 +5,7 @@ namespace Yuzu\Awin\Request;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
- * GetProgrammesDefinition
+ * GetProgrammeDetailDefinition
  *
  * @author Jonathan Martin <john@yuzu.co>
  */
