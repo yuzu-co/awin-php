@@ -1,5 +1,7 @@
 # Awin PHP
 
+[![Build Status](https://travis-ci.org/yuzu-co/awin-php.svg?branch=master)](https://travis-ci.org/yuzu-co/awin-php)
+
 PHP library for the Awin API.
 
 
