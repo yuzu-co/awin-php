@@ -1,6 +1,7 @@
 # Awin PHP
 
-[![Build Status](https://travis-ci.org/yuzu-co/awin-php.svg?branch=master)](https://travis-ci.org/yuzu-co/awin-php)
+[![Build Status](https://travis-ci.org/yuzu-co/awin-php.svg?branch=master)](https://travis-ci.org/yuzu-co/awin-php) 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/c6488afc-71f9-4111-b384-c95c9a6edbfb/mini.png)](https://insight.sensiolabs.com/projects/c6488afc-71f9-4111-b384-c95c9a6edbfb)
 
 PHP library for the Awin API.
 
