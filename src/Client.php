@@ -29,20 +29,23 @@ class Client
     public function __construct($apiToken)
     {
         $this->apiToken = $apiToken;
-        $this->initHttpAdapter();
     }
 
-    private function initHttpAdapter()
+    public function getClient()
     {
-        $this->httpClient = new GuzzleClient([
-            'base_uri' => self::AWIN_API_ENDPOINT,
-            'headers' => ['Authorization' => sprintf('Bearer %s', $this->apiToken)]
-        ]);
+        if (empty($this->httpClient)) {
+            $this->httpClient = new GuzzleClient([
+                'base_uri' => self::AWIN_API_ENDPOINT,
+                'headers' => ['Authorization' => sprintf('Bearer %s', $this->apiToken)]
+            ]);
+        }
+        
+        return $this->httpClient;
     }
 
     private function send(RequestDefinitionInterface $definition)
     {
-        $response = $this->httpClient->request(
+        $response = $this->getClient()->request(
             $definition->getMethod(),
             $definition->getUrl(),
             [
