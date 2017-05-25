@@ -16,7 +16,7 @@ use GuzzleHttp\Client as GuzzleClient;
  */
 class Client
 {
-    private $endpoint = 'https://api.awin.com';
+    const AWIN_API_ENDPOINT = 'https://api.awin.com';
 
     private $apiToken;
 
@@ -35,7 +35,7 @@ class Client
     {
         if (empty($this->httpClient)) {
             $this->httpClient = new GuzzleClient([
-                'base_uri' => $this->endpoint,
+                'base_uri' => self::AWIN_API_ENDPOINT,
                 'headers' => ['Authorization' => sprintf('Bearer %s', $this->apiToken)]
             ]);
         }
