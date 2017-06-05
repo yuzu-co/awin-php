@@ -21,6 +21,10 @@ $programmes = $client->getProgrammes($publisherId, ['countryCode' => 'FR', 'rela
 $advertiserId = 7476;
 $programmeDetail = $client->getProgrammeDetail($publisherId, ['advertiserId' => $advertiserId]);
 
+// Get commission groups of a programme
+$commissionGroups = $client->getCommissionGroups($publisherId, ['advertiserId' => $advertiserId]);
+
 var_dump($accounts->getBody());
 var_dump($programmes->getBody());
 var_dump($programmeDetail->getBody());
+var_dump($commissionGroups->getBody());

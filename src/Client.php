@@ -4,6 +4,7 @@ namespace Yuzu\Awin;
 
 use Yuzu\Awin\Http\Response;
 use Yuzu\Awin\Request\GetAccountDefinition;
+use Yuzu\Awin\Request\GetCommissionGroupsDefinition;
 use Yuzu\Awin\Request\GetProgrammeDetailDefinition;
 use Yuzu\Awin\Request\GetProgrammesDefinition;
 use Yuzu\Awin\Request\RequestDefinitionInterface;
@@ -87,5 +88,18 @@ class Client
         $options['publisherId'] = $publisherId;
 
         return $this->send(new GetProgrammeDetailDefinition($options));
+    }
+
+    /**
+     * @doc http://wiki.awin.com/index.php/API_get_commissiongroups
+     * @param $publisherId
+     * @param array $options
+     * @return Response
+     */
+    public function getCommissionGroups($publisherId, array $options = [])
+    {
+        $options['publisherId'] = $publisherId;
+
+        return $this->send(new GetCommissionGroupsDefinition($options));
     }
 }
