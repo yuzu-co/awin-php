@@ -24,7 +24,11 @@ $programmeDetail = $client->getProgrammeDetail($publisherId, ['advertiserId' => 
 // Get commission groups of a programme
 $commissionGroups = $client->getCommissionGroups($publisherId, ['advertiserId' => $advertiserId]);
 
+// Get commission groups of a programme
+$transactions = $client->getTransactions($publisherId, ['timezone' => 'Europe/Paris', 'startDate' => new \DateTime("-1week"), 'endDate' => new \DateTime("yesterday")]);
+                    
 var_dump($accounts->getBody());
 var_dump($programmes->getBody());
 var_dump($programmeDetail->getBody());
 var_dump($commissionGroups->getBody());
+var_dump($transactions->getBody());
