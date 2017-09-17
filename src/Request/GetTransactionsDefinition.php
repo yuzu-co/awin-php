@@ -18,7 +18,7 @@ class GetTransactionsDefinition extends AbstractRequestDefinition
 
     public function getBaseUrl()
     {
-        return sprintf('/publishers/%s/transactions?1', $this->getOptions()['publisherId']);
+        return sprintf('/publishers/%s/transactions/', $this->getOptions()['publisherId']);
     }
 
     protected function configureOptions(OptionsResolver $resolver)
