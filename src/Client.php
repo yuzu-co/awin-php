@@ -7,6 +7,7 @@ use Yuzu\Awin\Request\GetAccountDefinition;
 use Yuzu\Awin\Request\GetCommissionGroupsDefinition;
 use Yuzu\Awin\Request\GetProgrammeDetailDefinition;
 use Yuzu\Awin\Request\GetProgrammesDefinition;
+use Yuzu\Awin\Request\GetTransactionsDefinition;
 use Yuzu\Awin\Request\RequestDefinitionInterface;
 use GuzzleHttp\Client as GuzzleClient;
 
@@ -104,5 +105,18 @@ class Client
         $options['publisherId'] = $publisherId;
 
         return $this->send(new GetCommissionGroupsDefinition($options));
+    }
+
+    /**
+     * @doc http://wiki.awin.com/index.php/API_get_transactions_list
+     * @param $publisherId
+     * @param array $options
+     * @return Http\Response
+     */
+    public function getTransactions($publisherId, array $options = [])
+    {
+        $options['publisherId'] = $publisherId;
+
+        return $this->send(new GetTransactionsDefinition($options));
     }
 }
