@@ -35,5 +35,5 @@ php composer tests
 ## TODO
 
 * GET commissiongroups missing 
-* GET transactions (list|by ID) missing 
+* GET transactions by ID missing 
 * GET reports missing 
