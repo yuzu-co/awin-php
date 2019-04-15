@@ -14,7 +14,7 @@ class Response
     protected $body;
 
     /**
-     * @param string $statusCode statusCode
+     * @param int    $statusCode statusCode
      * @param string $body       body
      */
     public function __construct($statusCode, $body)
@@ -24,7 +24,7 @@ class Response
     }
 
     /**
-     * @return string
+     * @return int
      */
     public function getStatusCode()
     {
@@ -32,7 +32,7 @@ class Response
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getBody()
     {
