@@ -32,7 +32,7 @@ class Response
     }
 
     /**
-     * @return string
+     * @return array
      */
     public function getBody()
     {
