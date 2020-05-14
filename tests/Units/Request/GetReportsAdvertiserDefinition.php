@@ -82,7 +82,7 @@ class GetReportsAdvertiserDefinition extends atoum\test
                         'publisherId' => 'XXX',
                         'timezone' => 'Europe/Paris',
                         'startDate' => new \DateTime("-2days"),
-                        'endDate' => new \DateTime("yesterday")
+                        'endDate' => new \DateTime("yesterday"),
                         'region' => 'wrongValue'
                     );
                     $this->newTestedInstance($options);
