@@ -17,6 +17,7 @@ class GetReportsAdvertiserDefinition extends AbstractRequestDefinition
     }
 
     public function getBaseUrl()
+    {
         return sprintf('/publishers/%s/reports/advertiser', $this->getOptions()['publisherId']);
     }
 
