@@ -41,18 +41,23 @@ class Client
                 'headers' => ['Authorization' => sprintf('Bearer %s', $this->apiToken)]
             ]);
         }
-        
+
         return $this->httpClient;
     }
 
     private function send(RequestDefinitionInterface $definition)
     {
+        $options = [];
+        if ($definition->getBody()) {
+          $options = [
+              'body' => json_encode($definition->getBody())
+          ];
+        }
+
         $response = $this->getClient()->request(
             $definition->getMethod(),
             $definition->getUrl(),
-            [
-                'body' => json_encode($definition->getBody())
-            ]
+            $options
         );
 
         return new Response($response->getStatusCode(), $response->getBody()->getContents());
